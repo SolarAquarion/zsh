@@ -3,7 +3,8 @@ zplug "zsh-users/zsh-completions"
 zplug "willghatch/zsh-hooks"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zdharma/fast-syntax-highlighting", defer:3
+
 zplug "softmoth/zsh-vim-mode", defer:3
 zplug "chrissicool/zsh-256color"
 zplug "mollifier/cd-gitroot"
@@ -16,7 +17,12 @@ zplug "psprint/zsh-cmd-architect"
 zplug "mafredri/zsh-async"
 # # Load the theme.
 zplug "bhilburn/powerlevel9k", at:next, use:powerlevel9k.zsh-theme
-
+zplug "RobSis/zsh-completion-generator"
+zplug "fcambus/ansiweather"
+zplug "arzzen/calc.plugin.zsh"
+# Supports oh-my-zsh plugins and the like
+zplug "plugins/command-not-found",   from:oh-my-zsh
+zplug "hlissner/zsh-autopair", defer:2
 zplug "psprint/zsh-navigation-tools"
 zplug "psprint/zsh-editing-workbench"
 zplug "desyncr/zsh-autocompl"

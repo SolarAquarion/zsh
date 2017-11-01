@@ -34,8 +34,6 @@ export ENHANCD_FILTER
 export WINEDEBUG=fixme-all
 export WINEARCH=win64
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
-export __GLVND_DISALLOW_PATCHING=1
-http_proxy="http://localhost:8118"
 
 #export ZULU_DIR=~/.zulu
 #export ZULU_CONFIG_DIR=~/.config/zulu
