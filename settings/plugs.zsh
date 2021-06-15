@@ -16,7 +16,7 @@ zplug "psprint/zsh-cmd-architect"
 # # Syntax highlighting bundle.
 zplug "mafredri/zsh-async"
 # # Load the theme.
-zplug "bhilburn/powerlevel9k", at:next, use:powerlevel9k.zsh-theme
+zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "RobSis/zsh-completion-generator"
 zplug "fcambus/ansiweather"
 zplug "arzzen/calc.plugin.zsh"
@@ -28,7 +28,7 @@ zplug "psprint/zsh-editing-workbench"
 zplug "desyncr/zsh-autocompl"
 # Can manage local plugins
 zplug "~/.config/zsh/settings", from:local
-zplug "~/.config/base16-shell", from:local
+#zplug "~/.config/base16-shell", from:local
 # A relative path is resolved with respect to the $ZPLUG_HOME
 # zplug "repos/robbyrussell/oh-my-zsh/custom/plugins/my-plugin", from:local
 

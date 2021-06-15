@@ -1,4 +1,0 @@
-modules=( ${(Q)"${(z)$(<<\EO:modules
-
-EO:modules
-)}"} )
