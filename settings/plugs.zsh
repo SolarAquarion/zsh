@@ -22,7 +22,7 @@ zplug "fcambus/ansiweather"
 zplug "arzzen/calc.plugin.zsh"
 # Supports oh-my-zsh plugins and the like
 zplug "plugins/command-not-found",   from:oh-my-zsh
-zplug "hlissner/zsh-autopair", defer:2
+zplug "hlissner/zsh-autopair", defer:3
 zplug "psprint/zsh-navigation-tools"
 zplug "psprint/zsh-editing-workbench"
 zplug "desyncr/zsh-autocompl"
