@@ -2,3 +2,6 @@
 *.zwc
 .cache
 .zcompcache
+.zcompdump
+.zcompdump-apollo-5.2
+.zdirs
