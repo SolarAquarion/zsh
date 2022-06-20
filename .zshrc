@@ -16,13 +16,25 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
         print -P "%F{160} The clone has failed.%f%b"
 fi
 
+source ~/.config/zsh/settings/autosuggest.zsh  
+source ~/.config/zsh/settings/completion.zsh  
+source ~/.config/zsh/settings/environment.zsh  
+source ~/.config/zsh/settings/git.zsh      
+source ~/.config/zsh/settings/paths.zsh
+source ~/.config/zsh/settings/bzr.zsh		 c
+source ~/.config/zsh/settings/correction.zsh  
+source ~/.config/zsh/settings/export.zsh	  
+source ~/.config/zsh/settings/grep.zsh     
+source ~/.config/zsh/settings/clipboard.zsh	 
+source ~/.config/zsh/settings/directory.zsh	 
+source ~/.config/zsh/settings/functions.zsh	  
+source ~/.config/zsh/settings/history.zsh  
+source ~/.config/zsh/settings/substring.zsh
+
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-source ~/.config/zsh/settings/plugs.zsh
-
-zplug load
 export GOPATH=~/.go
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:/home/solaraquarion/.cargo/bin"
