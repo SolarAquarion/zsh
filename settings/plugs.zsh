@@ -10,9 +10,9 @@ zinit load "chrissicool/zsh-256color"
 zinit load "mollifier/cd-gitroot"
 zinit load "Tarrasch/zsh-functional"
 zinit load "zsh-users/zsh-autosuggestions"
-zinit load "b4b4r07/enhancd", pick"init.sh"
+zinit ice proto'git' pick'init.sh'
+zinit light "b4b4r07/enhancd"
 zinit load "supercrabtree/k"
-zinit load "psprint/zsh-cmd-architect"
 # # Syntax highlighting bundle.
 zinit load "mafredri/zsh-async"
 # # Load the theme.
