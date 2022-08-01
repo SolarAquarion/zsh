@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export TERM="xterm-256color" 
+export TERM="xterm-256color"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -15,20 +15,21 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
         print -P "%F{33} %F{34}Installation successful.%f%b" || \
         print -P "%F{160} The clone has failed.%f%b"
 fi
-
-source ~/.config/zsh/settings/autosuggest.zsh  
-source ~/.config/zsh/settings/completion.zsh  
-source ~/.config/zsh/settings/environment.zsh  
-source ~/.config/zsh/settings/git.zsh      
+source /usr/share/zinit/zinit.zsh
+source ~/.config/zsh/settings/autosuggest.zsh
+source ~/.config/zsh/settings/completion.zsh
+source ~/.config/zsh/settings/environment.zsh
+source ~/.config/zsh/settings/git.zsh
+source ~/.config/zsh/settings/plugs.zsh
 source ~/.config/zsh/settings/paths.zsh
-source ~/.config/zsh/settings/bzr.zsh		 c
-source ~/.config/zsh/settings/correction.zsh  
-source ~/.config/zsh/settings/export.zsh	  
-source ~/.config/zsh/settings/grep.zsh     
-source ~/.config/zsh/settings/clipboard.zsh	 
-source ~/.config/zsh/settings/directory.zsh	 
-source ~/.config/zsh/settings/functions.zsh	  
-source ~/.config/zsh/settings/history.zsh  
+source ~/.config/zsh/settings/bzr.zsh
+source ~/.config/zsh/settings/correction.zsh
+source ~/.config/zsh/settings/export.zsh
+source ~/.config/zsh/settings/grep.zsh
+source ~/.config/zsh/settings/clipboard.zsh
+source ~/.config/zsh/settings/directory.zsh
+source ~/.config/zsh/settings/functions.zsh
+source ~/.config/zsh/settings/history.zsh
 source ~/.config/zsh/settings/substring.zsh
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"

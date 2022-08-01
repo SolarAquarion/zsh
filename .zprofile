@@ -14,7 +14,7 @@ on start_ssh_agent() {
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
-
+export XDG_STATE_HOME="$HOME"/.local/state
 export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export GOPATH="$XDG_CONFIG_HOME"/go
 export LESSHISTFILE="$XDG_CACHE_HOME"/lesshist

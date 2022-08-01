@@ -10,7 +10,7 @@ zinit load "chrissicool/zsh-256color"
 zinit load "mollifier/cd-gitroot"
 zinit load "Tarrasch/zsh-functional"
 zinit load "zsh-users/zsh-autosuggestions"
-zinit ice proto'git' pick'init.sh'
+zinit ice wait'!0'
 zinit light "b4b4r07/enhancd"
 zinit load "supercrabtree/k"
 # # Syntax highlighting bundle.
