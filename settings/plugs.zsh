@@ -4,7 +4,6 @@ zinit ice "zsh-users/zsh-completions"
 zinit load "willghatch/zsh-hooks"
 zinit load "zsh-users/zsh-history-substring-search"
 zinit load "zdharma-continuum/fast-syntax-highlighting"
-
 zinit load "softmoth/zsh-vim-mode"
 zinit load "chrissicool/zsh-256color"
 zinit load "mollifier/cd-gitroot"
@@ -24,12 +23,14 @@ zinit load "arzzen/calc.plugin.zsh"
 # Supports oh-my-zsh plugins and the like
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::ssh-agent
+zinit snippet OMZP::common-aliases
+zinit snippet OMZP::zsh-interactive-cd
 zinit load "hlissner/zsh-autopair"
 zinit load "psprint/zsh-navigation-tools"
 zinit load "psprint/zsh-editing-workbench"
 zinit load "desyncr/zsh-autocompl"
-# Can manage local plugins
 zinit load "fnune/base16-shell"
+zinit load "zdharma-continuum/zsh-navigation-tools"
 # A relative path is resolved with respect to the $ZPLUG_HOME
 
 export ENHANCD_FILTER=fzf-tmux

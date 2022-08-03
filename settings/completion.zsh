@@ -6,10 +6,10 @@ zmodload zsh/complist
 {
     # zcomple the .zcompdump in the background
   zcompdump=$HOME/.cache/zsh/zcompdump
-  
+
        if [[ -s ${zcompdump} && ( ! -s ${zcompdump}.zwc || ${zcompdump} -nt ${zcompdump}.zwc )  ]]; then
              zcompile ${zcompdump}
-        fi           
+        fi
           unset zcompdump
     #
 } &!
