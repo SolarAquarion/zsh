@@ -1,9 +1,9 @@
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-zinit load "zsh-users/zsh-completions"
+zinit ice wait'!0'
+zinit ice "zsh-users/zsh-completions"
 zinit load "willghatch/zsh-hooks"
 zinit load "zsh-users/zsh-history-substring-search"
-zinit load "zsh-users/zsh-completions"
-zinit load "zdharma/fast-syntax-highlighting"
+zinit load "zdharma-continuum/fast-syntax-highlighting"
 
 zinit load "softmoth/zsh-vim-mode"
 zinit load "chrissicool/zsh-256color"
@@ -23,6 +23,7 @@ zinit load "fcambus/ansiweather"
 zinit load "arzzen/calc.plugin.zsh"
 # Supports oh-my-zsh plugins and the like
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::ssh-agent
 zinit load "hlissner/zsh-autopair"
 zinit load "psprint/zsh-navigation-tools"
 zinit load "psprint/zsh-editing-workbench"
