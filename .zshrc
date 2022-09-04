@@ -34,8 +34,6 @@ source ~/.config/zsh/settings/functions.zsh
 source ~/.config/zsh/settings/history.zsh
 source ~/.config/zsh/settings/substring.zsh
 source ~/.config/zsh/plugins/clipboard.zsh
-source ~/.config/zsh/plugins/ssh.zshrc
-
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
