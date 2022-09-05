@@ -55,6 +55,7 @@ export ENHANCD_FILTER=fzy:fzf:peco
 export ENHANCD_FILTER
 export WINEDEBUG=fixme-all
 export WINEARCH=win64
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 #export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
 #export ZULU_DIR=~/.zulu
