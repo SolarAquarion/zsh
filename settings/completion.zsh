@@ -2,7 +2,8 @@
 # load and initialize the completion system
 autoload -Uz compinit && compinit -C -d $HOME/.cache/zsh/zcompdump
 zmodload zsh/complist
-
+zmodload -Fa zsh/zutil b:zstyle
+builtin autoload -RUz is-at-least
 {
     # zcomple the .zcompdump in the background
   zcompdump=$HOME/.cache/zsh/zcompdump
@@ -91,6 +92,7 @@ fi
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:options'  auto-description '%d'
 zstyle ':completion:*:options'  description 'yes'
+zstyle ':completion:*:parameters' extra-verbose yes
 
 # Fallback to built in ls colors
 zstyle ':completion:*' list-colors ''
