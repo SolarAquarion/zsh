@@ -31,6 +31,9 @@ zinit load "psprint/zsh-editing-workbench"
 zinit load "desyncr/zsh-autocompl"
 zinit load "fnune/base16-shell"
 zinit load "zdharma-continuum/zsh-navigation-tools"
+
+zinit ice lucid nocompile wait'0e' nocompletions
+zinit load MenkeTechnologies/zsh-more-completions
 # A relative path is resolved with respect to the $ZPLUG_HOME
 
 export ENHANCD_FILTER=fzf-tmux
