@@ -1,5 +1,19 @@
 
+autoload -Uz add-zle-hook-widget
+autoload -Uz edit-command-line
 
+#############################
+# ZSH Modules
+#############################
+
+zmodload zsh/parameter
+zmodload zsh/complist
+zmodload zsh/deltochar
+zmodload zsh/mathfunc
+
+zmodload -ap zsh/mapfile mapfile
+zmodload -a  zsh/stat    zstat
+zmodload -a  zsh/zpty    zpty
 
 # Better umask
 umask 022

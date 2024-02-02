@@ -1,2 +1,3 @@
 zmodload zsh/zpty
 ZSH_AUTOSUGGEST_STRATEGY=(completion history match_prev_cmd)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40

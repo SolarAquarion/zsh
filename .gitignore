@@ -1,8 +1,5 @@
-*history
-*.zwc
-.cache
-.zcompcache
-.zcompdump
-.zcompdump-apollo-5.2
-.zdirs
 
+settings/secrets.zsh
+.zcompcache
+.zsh_history
+.zcompdump

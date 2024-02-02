@@ -16,24 +16,7 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
         print -P "%F{160} The clone has failed.%f%b"
 fi
 source /usr/share/zinit/zinit.zsh
-source ~/.config/zsh/settings/misc.zsh
-source ~/.config/zsh/settings/alias.zsh
-source ~/.config/zsh/settings/autosuggest.zsh
-source ~/.config/zsh/settings/completion.zsh
-source ~/.config/zsh/settings/environment.zsh
-source ~/.config/zsh/settings/git.zsh
 source ~/.config/zsh/settings/plugs.zsh
-source ~/.config/zsh/settings/paths.zsh
-source ~/.config/zsh/settings/bzr.zsh
-source ~/.config/zsh/settings/correction.zsh
-source ~/.config/zsh/settings/export.zsh
-source ~/.config/zsh/settings/grep.zsh
-source ~/.config/zsh/settings/clipboard.zsh
-source ~/.config/zsh/settings/directory.zsh
-source ~/.config/zsh/settings/functions.zsh
-source ~/.config/zsh/settings/history.zsh
-source ~/.config/zsh/settings/substring.zsh
-source ~/.config/zsh/plugins/clipboard.zsh
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit

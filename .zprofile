@@ -24,6 +24,12 @@ export RCRC="$XDG_CONFIG_HOME"/rcrc
 export SCREENRC="$XDG_CONFIG_HOME"/screenrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/X11-authority
 
+source "$HOME/.rye/env"
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # With GPG 2.1+ the GPG_AGENT_INFO variable is not set and any value present is
 # # ignored. Mutt, however, checks for its existence before attempting to use the
 # # agent for authentication. It doesn't use the value, so we just need something

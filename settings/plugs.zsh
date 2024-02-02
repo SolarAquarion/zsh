@@ -1,14 +1,23 @@
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-zinit ice wait'!0'
-zinit ice "zsh-users/zsh-completions"
 zinit load "willghatch/zsh-hooks"
 zinit load "zsh-users/zsh-history-substring-search"
-zinit load "zdharma-continuum/fast-syntax-highlighting"
+zinit wait lucid for "zdharma-continuum/fast-syntax-highlighting"
 zinit load "softmoth/zsh-vim-mode"
 zinit load "chrissicool/zsh-256color"
 zinit load "mollifier/cd-gitroot"
 zinit load "Tarrasch/zsh-functional"
-zinit load "zsh-users/zsh-autosuggestions"
+
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
+    zdharma/fast-syntax-highlighting \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+ blockf \
+    zsh-users/zsh-completions
+
+zinit ice lucid nocompile wait'0e' nocompletions
+zinit load MenkeTechnologies/zsh-more-completions
+
 zinit ice wait'!0'
 zinit light "b4b4r07/enhancd"
 zinit load "supercrabtree/k"
@@ -32,8 +41,23 @@ zinit load "desyncr/zsh-autocompl"
 zinit load "fnune/base16-shell"
 zinit load "zdharma-continuum/zsh-navigation-tools"
 
-zinit ice lucid nocompile wait'0e' nocompletions
-zinit load MenkeTechnologies/zsh-more-completions
+zinit is-snippet for ~/.config/zsh/settings/alias.zsh
+zinit is-snippet for ~/.config/zsh/settings/autosuggest.zsh
+zinit is-snippet for ~/.config/zsh/settings/bzr.zsh
+zinit is-snippet for ~/.config/zsh/settings/completion.zsh
+zinit is-snippet for ~/.config/zsh/settings/grep.zsh
+zinit is-snippet for ~/.config/zsh/settings/misc.zsh
+zinit is-snippet for ~/.config/zsh/settings/environment.zsh
+zinit is-snippet for ~/.config/zsh/settings/git.zsh
+zinit is-snippet for ~/.config/zsh/settings/paths.zsh
+zinit is-snippet for ~/.config/zsh/settings/correction.zsh
+zinit is-snippet for ~/.config/zsh/settings/export.zsh
+zinit is-snippet for ~/.config/zsh/settings/substring.zsh
+zinit is-snippet for ~/.config/zsh/settings/history.zsh
+zinit is-snippet for ~/.config/zsh/settings/functions.zsh
+zinit is-snippet for ~/.config/zsh/settings/directory.zsh
+zinit is-snippet for ~/.config/zsh/settings/clipboard.zsh
+zinit is-snippet for ~/.config/zsh/settings/secrets.zsh
 # A relative path is resolved with respect to the $ZPLUG_HOME
 
 export ENHANCD_FILTER=fzf-tmux

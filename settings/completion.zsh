@@ -1,6 +1,7 @@
 # add in zsh-completions
 # load and initialize the completion system
 autoload -Uz compinit && compinit -C -d $HOME/.cache/zsh/zcompdump
+
 zmodload zsh/complist
 zmodload -Fa zsh/zutil b:zstyle
 builtin autoload -RUz is-at-least
