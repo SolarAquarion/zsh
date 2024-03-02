@@ -31,7 +31,6 @@ zinit load "fcambus/ansiweather"
 zinit load "arzzen/calc.plugin.zsh"
 # Supports oh-my-zsh plugins and the like
 zinit snippet OMZP::command-not-found
-zinit snippet OMZP::ssh-agent
 zinit snippet OMZP::common-aliases
 zinit snippet OMZP::zsh-interactive-cd
 zinit load "hlissner/zsh-autopair"
