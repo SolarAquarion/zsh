@@ -7,16 +7,20 @@ zinit load "chrissicool/zsh-256color"
 zinit load "mollifier/cd-gitroot"
 zinit load "Tarrasch/zsh-functional"
 
-zinit wait lucid for \
- atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
-    zdharma/fast-syntax-highlighting \
- atload"!_zsh_autosuggest_start" \
-    zsh-users/zsh-autosuggestions \
- blockf \
-    zsh-users/zsh-completions
+zi wait lucid for \
+  atinit"ZI[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+     z-shell/F-Sy-H \
+  blockf \
+     zsh-users/zsh-completions \
+  atload"!_zsh_autosuggest_start" \
+     zsh-users/zsh-autosuggestions
 
 zinit ice lucid nocompile wait'0e' nocompletions
 zinit load MenkeTechnologies/zsh-more-completions
+
+zi wait lucid for \
+  z-shell/zsh-fancy-completions
+
 
 zinit ice wait'!0'
 zinit light "b4b4r07/enhancd"
@@ -39,6 +43,9 @@ zinit load "psprint/zsh-editing-workbench"
 zinit load "desyncr/zsh-autocompl"
 zinit load "fnune/base16-shell"
 zinit load "zdharma-continuum/zsh-navigation-tools"
+
+zinit ice lucid as"program" pick"bin/git-dsf"
+zinit load so-fancy/diff-so-fancy
 
 zinit is-snippet for ~/.config/zsh/settings/alias.zsh
 zinit is-snippet for ~/.config/zsh/settings/autosuggest.zsh
