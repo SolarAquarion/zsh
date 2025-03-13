@@ -3,3 +3,4 @@ settings/secrets.zsh
 .zcompcache
 .zsh_history
 .zcompdump
+.zcalc_history
