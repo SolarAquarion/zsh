@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export TERM="xterm-256color"
-
+source ~/.zsh/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -41,6 +41,7 @@ export WINEARCH=win64
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 #export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #export ZULU_DIR=~/.zulu
 #export ZULU_CONFIG_DIR=~/.config/zulu
 # Initialise zulu plugin manager
@@ -50,10 +51,9 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-# argc-completions
 export ARGC_COMPLETIONS_ROOT="/home/solaraquarion/.local/share/argc-completions"
-export ARGC_COMPLETIONS_PATH="$ARGC_COMPLETIONS_ROOT/completions"
+export ARGC_COMPLETIONS_PATH="$ARGC_COMPLETIONS_ROOT/completions/linux:$ARGC_COMPLETIONS_ROOT/completions"
 export PATH="$ARGC_COMPLETIONS_ROOT/bin:$PATH"
 # To add completions for only the specified command, modify next line e.g. argc_scripts=( cargo git )
-argc_scripts=( $(ls -p -1 "$ARGC_COMPLETIONS_ROOT/completions" | sed -n 's/\.sh$//p') )
+argc_scripts=( $(ls -p -1 "$ARGC_COMPLETIONS_ROOT/completions/linux" "$ARGC_COMPLETIONS_ROOT/completions" | sed -n 's/\.sh$//p') )
 source <(argc --argc-completions zsh $argc_scripts)

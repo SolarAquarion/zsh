@@ -1,7 +1,5 @@
 ## Command history configuration
-if [ -z "$HISTFILE" ]; then
-    HISTFILE=$XDG_STATE_HOME/zsh/history/zhistory
-fi
+
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -42,6 +40,10 @@ down-line-or-local-history() {
 }
 zle -N down-line-or-local-history
 
+# Ignore commands that start with spaces and duplicates.
+
+export HISTCONTROL=ignoreboth
+HISTORY_IGNORE="((cd|ls|lsd|la|ll|z|bat|cat|rm|cross|ej)(| *))"
 # Global history
 bindkey "^[[1;5A" up-line-or-history    # [CTRL] + Cursor up
 bindkey "^[[1;5B" down-line-or-history  # [CTRL] + Cursor down

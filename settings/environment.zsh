@@ -17,6 +17,10 @@ zmodload -a  zsh/zpty    zpty
 
 # Better umask
 umask 022
+
+# Colors
+autoload -Uz colors && colors
+
 # awesome cd movements from zshkit
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
 DIRSTACKSIZE=5
