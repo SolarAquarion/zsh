@@ -23,4 +23,5 @@ _zsh_autosuggest_strategy_histdb_top() {
 }
 
 ZSH_AUTOSUGGEST_STRATEGY=(histdb_top_here histdb_top completion history match_prev_cmd)
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
+

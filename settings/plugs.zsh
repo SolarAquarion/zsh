@@ -1,7 +1,6 @@
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 zinit is-snippet for ~/.config/zsh/settings/alias.zsh
 
-zinit is-snippet for ~/.config/zsh/settings/bzr.zsh
 zinit is-snippet for ~/.config/zsh/settings/completion.zsh
 zinit is-snippet for ~/.config/zsh/settings/grep.zsh
 zinit is-snippet for ~/.config/zsh/settings/misc.zsh
@@ -14,8 +13,9 @@ zinit is-snippet for ~/.config/zsh/settings/export.zsh
 zinit is-snippet for ~/.config/zsh/settings/history.zsh
 zinit is-snippet for ~/.config/zsh/settings/functions.zsh
 zinit is-snippet for ~/.config/zsh/settings/directory.zsh
-zinit is-snippet for ~/.config/zsh/settings/clipboard.zsh
+zinit is-snippet for ~/.config/zsh/plugins/clipboard.zsh
 zinit is-snippet for ~/.config/zsh/settings/secrets.zsh
+zinit is-snippet for ~/.config/zsh/settings/openclaw.zsh
 
 zinit load "willghatch/zsh-hooks"
 
@@ -32,6 +32,7 @@ zinit ice nocompletions atinit'setopt interactivecomments'
 zinit ice eval'zstyle -L ":completion:*" completer | sed "s/_expand //"'
 zinit light marlonrichert/zsh-autocomplete
 
+zinit ice wait lucid snippet for ~/.config/zsh/settings/bindkey.zsh
 zinit wait lucid for \
   atinit"ZI[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
      z-shell/F-Sy-H \
@@ -45,8 +46,8 @@ zinit is-snippet for ~/.config/zsh/settings/autosuggest.zsh
 zinit ice lucid nocompile wait'0e' nocompletions
 zinit load MenkeTechnologies/zsh-more-completions
 
-zinit wait lucid for \
-  z-shell/zsh-fancy-completions
+zinit ice lucid nocompletions
+zinit load z-shell/zsh-fancy-completions
 
 zinit light Aloxaf/fzf-tab
 
@@ -63,25 +64,20 @@ zi wait lucid for \
 zinit ice wait'!0'
 zinit light "b4b4r07/enhancd"
 zinit load "supercrabtree/k"
-# # Syntax highlighting bundle.
 zinit load "mafredri/zsh-async"
-# # Load the theme.
 zinit ice load depth=1
 zinit light "romkatv/powerlevel10k"
 zinit load "RobSis/zsh-completion-generator"
 zinit load "fcambus/ansiweather"
 zinit load "arzzen/calc.plugin.zsh"
-# Supports oh-my-zsh plugins and the like
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::common-aliases
 zinit snippet OMZP::zsh-interactive-cd
 zinit load "hlissner/zsh-autopair"
 zinit load "psprint/zsh-editing-workbench"
-zinit load "desyncr/zsh-autocompl"
 zinit load "fnune/base16-shell"
 zinit load "zdharma-continuum/zsh-navigation-tools"
 zinit load oz/safe-paste
-# for zinit
 zinit load wfxr/forgit
 
 zinit ice as"program" pick"bin/git-fuzzy"
@@ -89,7 +85,3 @@ zinit light bigH/git-fuzzy
 zinit light CraigCarey/gstreamer-tab
 zinit ice lucid as"program" pick"bin/git-dsf"
 zinit load so-fancy/diff-so-fancy
-
-# A relative path is resolved with respect to the $ZPLUG_HOME
-
-export ENHANCD_FILTER=fzf-tmux

@@ -1,23 +1,92 @@
-# smart urls
-autoload -U url-quote-magic
-autoload -Uz vcs_info
-zle -N self-insert url-quote-magic
+# Miscellaneous zsh options
 
-# pager
-export PAGER="less -R"
-export LC_CTYPE=$LANG
+autoload -Uz add-zle-hook-widget
+autoload -Uz edit-command-line
 
-# default env vars (if not set)
-if [[ -z "$TERM" ]]; then
-	export TERM=xterm-256color
-fi
+#############################
+# ZSH Modules
+#############################
 
-export SYSTEMD_EDITOR=${SYSTEMD_EDITOR:-vim}
-export EDITOR=${EDITOR:-vim}
-export VIRTUAL=${VIRTUAL:-vim}
-export COLORTERM="yes"
-export KEYTIMEOUT=1
-# pre execute functions
-typeset -ga preexec_functions
-typeset -ga precmd_functions
-typeset -ga chpwd_functions
+zmodload zsh/parameter
+zmodload zsh/complist
+zmodload zsh/deltochar
+zmodload zsh/mathfunc
+
+zmodload -ap zsh/mapfile mapfile
+zmodload -a  zsh/stat    zstat
+zmodload -a  zsh/zpty    zpty
+
+# Better umask
+umask 022
+
+# Colors
+autoload -Uz colors && colors
+
+DIRSTACKSIZE=5
+
+setopt BRACE_CCL
+setopt COMBINING_CHARS
+setopt RC_QUOTES
+unsetopt MAIL_WARNING
+
+setopt LONG_LIST_JOBS
+setopt AUTO_RESUME
+setopt NOTIFY
+unsetopt BG_NICE
+unsetopt HUP
+unsetopt CHECK_JOBS
+
+unsetopt nomatch
+
+# Ignore <C-d> logout
+setopt ignore_eof
+# Disable beeps
+setopt no_beep
+# Enable spellcheck
+setopt correct
+# Enable "=command" feature
+setopt equals
+# Disable flow control
+setopt no_flow_control
+
+# Save time stamp
+setopt extended_history
+# Better jobs
+setopt long_list_jobs
+# Enable completion in "--option=arg"
+setopt magic_equal_subst
+# Add "/" if completes directory
+setopt mark_dirs
+# Disable menu complete
+setopt no_menu_complete
+setopt list_rows_first
+# Expand globs when completion
+setopt glob_complete
+# Can search subdirectory in $PATH
+setopt path_dirs
+# For multi byte
+setopt print_eightbit
+# Print exit value if return code is non-zero
+setopt print_exit_value
+# Short statements in for, repeat, select, if, function
+setopt short_loops
+unsetopt promptcr
+setopt hash_cmds
+# Enable comment string
+setopt interactive_comments
+# Improve rm *
+setopt rm_star_wait
+# Prompt substitution
+setopt prompt_subst
+
+setopt auto_list
+setopt auto_param_slash
+setopt auto_param_keys
+# List like "ls -F"
+setopt list_types
+# Compact completion
+setopt list_packed
+# Check original command in alias completion
+setopt complete_aliases
+unsetopt hist_verify
+setopt always_last_prompt

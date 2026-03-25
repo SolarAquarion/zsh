@@ -1,4 +1,6 @@
-# Enable Wayland support for different applications
+# ZSH environment — loaded for ALL shells
+
+# Wayland support
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export WAYLAND=1
     export QT_QPA_PLATFORM='wayland;xcb'
@@ -11,3 +13,6 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export ECORE_EVAS_ENGINE=wayland_egl
     export ELM_ENGINE=wayland_egl
 fi
+
+export PATH="$PATH:$HOME/.config/.foundry/bin"
+export PATH="$HOME/.local/bin:$PATH"
