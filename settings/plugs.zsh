@@ -16,6 +16,7 @@ zinit is-snippet for ~/.config/zsh/settings/directory.zsh
 zinit is-snippet for ~/.config/zsh/plugins/clipboard.zsh
 zinit is-snippet for ~/.config/zsh/settings/secrets.zsh
 zinit is-snippet for ~/.config/zsh/settings/openclaw.zsh
+zinit is-snippet for ~/.config/zsh/settings/fzf-functions.zsh
 
 zinit load "willghatch/zsh-hooks"
 
@@ -37,7 +38,9 @@ zinit wait lucid for \
   atinit"ZI[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
      z-shell/F-Sy-H \
   blockf \
-     zsh-users/zsh-completions \
+     zsh-users/zsh-completions
+
+zinit wait lucid for \
   atload"!_zsh_autosuggest_start" \
      zsh-users/zsh-autosuggestions
      
@@ -50,6 +53,7 @@ zinit ice lucid nocompletions
 zinit load z-shell/zsh-fancy-completions
 
 zinit light Aloxaf/fzf-tab
+
 
 zi ice as'null' from"gh-r" sbin
 zi light ajeetdsouza/zoxide

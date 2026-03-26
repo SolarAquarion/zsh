@@ -16,3 +16,4 @@ fi
 
 export PATH="$PATH:$HOME/.config/.foundry/bin"
 export PATH="$HOME/.local/bin:$PATH"
+

@@ -47,3 +47,10 @@ HISTORY_IGNORE="((cd|ls|lsd|la|ll|z|bat|cat|rm|cross|ej)(| *))"
 # Global history
 bindkey "^[[1;5A" up-line-or-history    # [CTRL] + Cursor up
 bindkey "^[[1;5B" down-line-or-history  # [CTRL] + Cursor down
+
+# Terminfo-based history search (portable across terminals)
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "${terminfo[kcuu1]}" history-beginning-search-backward-end
+bindkey "${terminfo[kcud1]}" history-beginning-search-forward-end
