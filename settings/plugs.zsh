@@ -1,4 +1,4 @@
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
+# Local and third-party plugins (formerly oh-my-zsh plugins, now local)
 zinit is-snippet for ~/.config/zsh/settings/alias.zsh
 
 zinit is-snippet for ~/.config/zsh/settings/completion.zsh
@@ -17,6 +17,8 @@ zinit is-snippet for ~/.config/zsh/plugins/clipboard.zsh
 zinit is-snippet for ~/.config/zsh/settings/secrets.zsh
 zinit is-snippet for ~/.config/zsh/settings/openclaw.zsh
 zinit is-snippet for ~/.config/zsh/settings/fzf-functions.zsh
+zinit is-snippet for ~/.config/zsh/settings/apply-env.zsh
+zinit is-snippet for ~/.config/zsh/settings/zpwr-utils.zsh
 
 zinit load "willghatch/zsh-hooks"
 
@@ -74,9 +76,10 @@ zinit light "romkatv/powerlevel10k"
 zinit load "RobSis/zsh-completion-generator"
 zinit load "fcambus/ansiweather"
 zinit load "arzzen/calc.plugin.zsh"
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::common-aliases
-zinit snippet OMZP::zsh-interactive-cd
+# Local OMZ replacements (formerly plugins + libs)
+zinit is-snippet for ~/.config/zsh/settings/omz-local.zsh
+zinit is-snippet for ~/.config/zsh/settings/omz-libs.zsh
+
 zinit load "hlissner/zsh-autopair"
 zinit load "psprint/zsh-editing-workbench"
 zinit load "fnune/base16-shell"

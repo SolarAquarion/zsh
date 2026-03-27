@@ -90,3 +90,17 @@ setopt list_packed
 setopt complete_aliases
 unsetopt hist_verify
 setopt always_last_prompt
+
+# Sort filenames numerically (e.g., file1, file2, file10 instead of file1, file10, file2)
+setopt numericglobsort
+
+# Include dotfiles in globbing
+setopt glob_dots
+
+# VSCode-like word navigation (treat more chars as word boundaries)
+export WORDCHARS='*?[]~=&;!#$%^(){}<>'
+
+# Directory stack
+setopt auto_pushd          # cd pushes to directory stack
+setopt pushd_ignore_dups   # no duplicate dirs on stack
+setopt pushd_silent        # don't print directory stack after pushd/popd
